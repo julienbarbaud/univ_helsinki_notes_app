@@ -24,6 +24,7 @@ let maxId = 3;
 const app = express()
 app.use(express.json())
 app.use(cors())
+app.use(express.static("dist"))
 
 app.get("/", (request, response) => response.send("heya\n try connecting to /api/notes to see my noodz"))
 
